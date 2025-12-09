@@ -108,3 +108,26 @@ footer {
     border-top: 1px solid white;
     padding-top: 10px;
 }
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px 10px 50px;
+}
+
+.section-title h3 {
+    color: darkblue;
+    font-size: 22px;
+}
+.content-padding {
+    padding: 0 50px 50px 50px;
+}
+
+.text-blue {
+    color: darkblue;
+}
+
+.details-info {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
