@@ -176,3 +176,30 @@ footer {
     background-color: darkblue;
     margin-bottom: 20px;
 }
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+.form-box {
+    border: 2px solid darkblue;
+    padding: 40px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: aliceblue;
+}
+
+.form-box input {
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+.error-msg {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
