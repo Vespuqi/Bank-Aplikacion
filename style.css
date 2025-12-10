@@ -26,6 +26,10 @@ header {
     margin: 0;
 }
 
+.logo a{
+    text-decoration: none;
+}
+
 header ul {
     display: flex;
     list-style: none;
@@ -52,6 +56,10 @@ header ul li a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.bgfoto a{
+    text-decoration: none;
 }
 
 .bgfoto h1 {
@@ -203,3 +211,4 @@ footer {
     font-size: 12px;
     display: none;
 }
+
