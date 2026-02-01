@@ -2,8 +2,8 @@
 class Database {
     private $host = "localhost";
     private $db_name = "culler_bank";
-    private $username = "root"; // Change if needed
-    private $password = "";     // Change if needed
+    private $username = "root"; 
+    private $password = "";     
     public $conn;
 
     public function getConnection() {
