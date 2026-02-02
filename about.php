@@ -1,27 +1,14 @@
+<?php session_start(); include_once 'classes/Database.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Culler Bank - About Us</title>
+    <title>About Us - Culler Bank</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="headeri">
-            <div class="logo"> 
-                <a href="index.html">
-                    <p>Culler Bank</p>
-                </a>
-            </div>
-        </div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
-    </header>
+    <?php include 'includes/header.php'; ?>
 
     <main>
         <div class="section-title">
@@ -31,15 +18,11 @@
             <p>Welcome to Culler Bank. Since 2006, we have been providing secure banking solutions.</p>
             <p>Our mission is to help you achieve your financial goals with transparency and trust.</p>
             <br>
-            <h3 class="text-blue">Our Vision</h3>
+            <h3 style="color:darkblue;">Our Vision</h3>
             <p>To be the leading bank in the region with innovative digital solutions.</p>
         </div>
     </main>
 
-    <footer>
-        <div class="fundi">
-            <p>Copyright 2025 Culler Bank.</p>
-        </div>
-    </footer>
+    <?php include 'includes/footer.php'; ?>
 </body>
 </html>
