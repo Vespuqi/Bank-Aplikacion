@@ -36,6 +36,15 @@ header ul {
     gap: 30px;
 }
 
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+
 header ul li a {
     text-decoration: none;
     color: darkblue;
@@ -45,6 +54,19 @@ header ul li a {
 
 header ul li a:hover {
     color: red; 
+}
+
+.dashboard-link {
+    color: darkblue;
+    font-weight: bold;
+}
+
+.dashboard-link:hover {
+    color: red;
+}
+
+.hamburger {
+    display: none;
 }
 
 
@@ -212,3 +234,45 @@ footer {
     display: none;
 }
 
+@media only screen and (max-width: 924px) {
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    body > header {
+        flex-shrink: 0;
+    }
+
+    main {
+        flex: 1;
+        min-height: calc(100vh - 200px);
+        padding: 20px;
+    }
+
+    .content-padding {
+        padding: 20px !important;
+    }
+
+    .section-title {
+        padding: 20px 20px 10px 20px !important;
+    }
+
+    .fotografit {
+        padding: 20px !important;
+    }
+
+    .form-container {
+        padding: 30px 20px !important;
+    }
+
+    footer {
+        flex-shrink: 0;
+        margin-top: auto;
+    }
+
+    header ul {
+        display: none;
+    }
+}
