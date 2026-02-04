@@ -1,5 +1,11 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+header("Expires: 0");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +16,7 @@ session_start();
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header id="main-header">
         <div class="headeri">
             <div class="logo"> 
                 <a href="index.php">
@@ -18,14 +24,19 @@ session_start();
                 </a>
             </div>
         </div>
-        <ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-menu">
             <li><a href="index.php">Home</a></li>
             <li><a href="about.php">About Us</a></li>
             <li><a href="services.php">Services</a></li>
             <li><a href="contact.php">Contact</a></li>
             <?php if(isset($_SESSION['user_id'])): ?>
                 <?php if($_SESSION['role'] == 'admin'): ?>
-                    <li><a href="dashboard.php" style="color:red;">Dashboard</a></li>
+                    <li><a href="dashboard.php" class="dashboard-link">Dashboard</a></li>
                 <?php endif; ?>
                 <li><a href="logout.php">Logout (<?php echo $_SESSION['username']; ?>)</a></li>
             <?php else: ?>
@@ -34,3 +45,17 @@ session_start();
             <?php endif; ?>
         </ul>
     </header>
+    <script>
+    function toggleMenu() {
+        var header = document.getElementById('main-header');
+        if (header) {
+            header.classList.toggle('active');
+        }
+    }
+    
+    window.addEventListener('storage', function(e) {
+        if (e.key === 'logout') {
+            window.location.reload(true);
+        }
+    });
+    </script>
